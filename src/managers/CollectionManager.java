@@ -30,7 +30,7 @@ public class CollectionManager {
     }
 
     /**
-     * Метод,реализуюший генерацию уникального id для поля id класса SpaceMarine
+     * Метод, реализуюший генерацию уникального id для поля id класса SpaceMarine
      *
      * @return поле id
      */
@@ -56,14 +56,14 @@ public class CollectionManager {
     }
 
     /**
-     * Метод,реализующий отчищение коллекции
+     * Метод, реализующий отчищение коллекции
      */
     public void clear() {
         collection = CollectionSpaceMarines.emptyCollection();
     }
 
     /**
-     * Метод,реализующий сохранение коллекции
+     * Метод, реализующий сохранение коллекции
      */
     public void save() {
         Parser.saveXmlStringToFile(collection, filePath);

@@ -6,7 +6,7 @@ import managers.IOManager;
 import java.time.format.DateTimeFormatter;
 
 /**
- * Класс описывающий конкретную реализацию команды info.
+ * Класс, описывающий конкретную реализацию команды info.
  *
  * @author Базанов Евгений
  */

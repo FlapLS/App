@@ -6,7 +6,7 @@ import managers.CollectionManager;
 import managers.IOManager;
 
 /**
- * Класс описывающий конкретную реализацию команды add.
+ * Класс, описывающий конкретную реализацию команды add.
  *
  * @author Базанов Евгений
  */

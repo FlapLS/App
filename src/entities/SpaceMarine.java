@@ -112,9 +112,9 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
     }
 
     /**
-     * метод ,проверяющий правильность вводимых полей
+     * метод, проверяющий правильность вводимых полей
      *
-     * @return true в случаи правильного ввода всех полей ,false в случаи не соблюдений ввода полей
+     * @return true в случаи правильного ввода всех полей, false в случаи не соблюдений ввода полей
      */
     public boolean isValuesValid() {
         if (id == null) {

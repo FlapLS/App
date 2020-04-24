@@ -4,7 +4,7 @@ import managers.CollectionManager;
 import managers.IOManager;
 
 /**
- * Класс описывающий конкретную реализацию команды filter by height.
+ * Класс, описывающий конкретную реализацию команды filter by height.
  *
  * @author Базанов Евгений.
  */

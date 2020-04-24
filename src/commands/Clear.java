@@ -4,7 +4,7 @@ import managers.CollectionManager;
 import managers.IOManager;
 
 /**
- * Класс описывающий конкретную реализацию команды clear.
+ * Класс, описывающий конкретную реализацию команды clear.
  *
  * @author Базанов Евгений
  */

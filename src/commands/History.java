@@ -5,7 +5,7 @@ import managers.IOManager;
 import utils.CommandsHistory;
 
 /**
- * Класс описывающий конкретную реализацию команды history.
+ * Класс, описывающий конкретную реализацию команды history.
  *
  * @author Базанов Евгений
  */

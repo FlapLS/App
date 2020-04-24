@@ -13,7 +13,7 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 
 /**
- * Класс описывающий конкретную реализацию команды execute script.
+ * Класс, описывающий конкретную реализацию команды execute script.
  *
  * @author Базанов Евгений
  */

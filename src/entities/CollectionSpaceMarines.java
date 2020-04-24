@@ -7,6 +7,11 @@ import java.util.ArrayDeque;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+/**
+ * Класс-хранилище коллекции объектов SpaceMarine
+ *
+ * @author Базанов Евгений
+ */
 @XmlRootElement(name = "SpaceMarineCollection")
 public class CollectionSpaceMarines {
     @XmlElement(name = "SpaceMarine")
@@ -29,7 +34,7 @@ public class CollectionSpaceMarines {
     }
 
     /**
-     * Метод,необходимый для реализации команд add и add_if_max
+     * Метод, необходимый для реализации команд add и add_if_max
      *
      * @param marine
      */

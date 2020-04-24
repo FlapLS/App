@@ -16,7 +16,7 @@ public class CommandsHistory {
     final Queue<Command> history = new LinkedList<>();
 
     /**
-     * Метод,реализуюший выполнение команды history
+     * Метод, реализуюший выполнение команды history
      *
      * @param command название команды
      */

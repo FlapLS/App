@@ -6,7 +6,7 @@ import managers.CollectionManager;
 import managers.IOManager;
 
 /**
- * Класс описывающий конкретную реализацию команды add if max.
+ * Класс, описывающий конкретную реализацию команды add if max.
  *
  * @author Базанов Евгений
  */

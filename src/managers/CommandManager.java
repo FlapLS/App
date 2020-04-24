@@ -10,7 +10,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Класс, предназначеный для вызова команд,работающих с колекцией
+ * Класс, предназначеный для вызова команд, работающих с колекцией
  */
 public class CommandManager {
     private final Set<Command> commands = new HashSet<>();

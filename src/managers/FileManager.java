@@ -9,7 +9,7 @@ import static utils.Constants.DEFAULT_FILE;
 import static utils.Constants.DEFAULT_PATH;
 
 /**
- * Класс ,работающий с файлом
+ * Класс, работающий с файлом
  *
  * @author Базанов Евгений
  */

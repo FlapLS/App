@@ -16,7 +16,7 @@ public abstract class Command {
     protected final IOManager io;
 
     /**
-     * Конструктор ,который будет вызываться при наследования свойст абстрактного класса Command
+     * Конструктор, который будет вызываться при наследования свойст абстрактного класса Command
      *
      * @param commandName название команды.
      * @param info        описание команды

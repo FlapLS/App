@@ -17,7 +17,7 @@ public class Coordinates {
     private Long y; //Максимальное значение поля: 72, Поле не может быть null
 
     /**
-     * Метод,реализующий инициализацию полей класса Coordinates
+     * Метод, реализующий инициализацию полей класса Coordinates
      *
      * @param ioManager
      * @return инициализированные поля класса Coordinates
@@ -30,7 +30,7 @@ public class Coordinates {
     }
 
     /**
-     * *Метод,реализующий инициализацию поля x класса Coordinates
+     * *Метод, реализующий инициализацию поля x класса Coordinates
      *
      * @param io
      */
@@ -45,7 +45,7 @@ public class Coordinates {
     }
 
     /**
-     * Метод,реализующий инициализацию поля y класса Coordinates
+     * Метод, реализующий инициализацию поля y класса Coordinates
      *
      * @param io
      */
@@ -66,9 +66,9 @@ public class Coordinates {
     }
 
     /**
-     * метод ,проверяющий правильность вводимых полей
+     * метод, проверяющий правильность вводимых полей
      *
-     * @return true в случаи правильного ввода всех полей ,false в случаи не соблюдений ввода полей
+     * @return true в случаи правильного ввода всех полей, false в случаи не соблюдений ввода полей
      */
     public boolean isValuesValid() {
         if (x == null) {

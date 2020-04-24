@@ -20,7 +20,7 @@ public class SpaceMarineInitializer {
     }
 
     /**
-     * Метод,реализующий инициализацию полей класса SpaceMarine
+     * Метод, реализующий инициализацию полей класса SpaceMarine
      *
      * @return инициализированные поля класса SpaceMarine
      */
