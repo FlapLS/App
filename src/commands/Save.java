@@ -4,7 +4,7 @@ import managers.CollectionManager;
 import managers.IOManager;
 
 /**
- * Класс описывающий конкретную реализацию команды save.
+ * Класс, описывающий конкретную реализацию команды save.
  *
  * @author Базанов Евгений
  */

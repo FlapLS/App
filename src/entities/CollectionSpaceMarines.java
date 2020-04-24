@@ -18,25 +18,17 @@ public class CollectionSpaceMarines {
     private ArrayDeque<SpaceMarine> marines = new ArrayDeque<>();
 
     /**
-     * Метод отчищающий колеккцию
+     * геттер, возвращающий копию массива элементов
      *
-     * @return пустую коллекцию
      */
-    public static CollectionSpaceMarines emptyCollection() {
-        final CollectionSpaceMarines marines = new CollectionSpaceMarines();
-        marines.marines = new ArrayDeque<>();
-        return marines;
-    }
-
-
     public ArrayDeque<SpaceMarine> getMarines() {
         return marines.clone();
     }
 
     /**
-     * Метод, необходимый для реализации команд add и add_if_max
+     * Метод для добавления элемента в коллекцию
      *
-     * @param marine
+     * @param marine объект который будет добавлен в коллекцию
      */
     public void addMarine(SpaceMarine marine) {
         marines.add(marine);
@@ -58,7 +50,7 @@ public class CollectionSpaceMarines {
     }
 
     /**
-     *
+     * Метод, реализовывающий сортировку по возрастанию
      */
     public void sort() {
         marines = marines.stream().sorted().collect(Collectors.toCollection(ArrayDeque::new));

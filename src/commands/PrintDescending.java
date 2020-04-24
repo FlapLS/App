@@ -6,7 +6,7 @@ import managers.IOManager;
 import java.util.Comparator;
 
 /**
- * Класс описывающий конкретную реализацию команды print descending.
+ * Класс, описывающий конкретную реализацию команды print descending.
  *
  * @author Базанов Евгений
  */

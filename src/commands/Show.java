@@ -4,7 +4,7 @@ import managers.CollectionManager;
 import managers.IOManager;
 
 /**
- * Класс описывающий конкретную реализацию команды show.
+ * Класс, описывающий конкретную реализацию команды show.
  *
  * @author Базанов Евгений
  */

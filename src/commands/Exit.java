@@ -4,7 +4,7 @@ import managers.CollectionManager;
 import managers.IOManager;
 
 /**
- * Класс описывающий конкретную реализацию команды exit.
+ * Класс, описывающий конкретную реализацию команды exit.
  *
  * @author Базанов Евгений
  */

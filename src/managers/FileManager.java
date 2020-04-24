@@ -9,7 +9,7 @@ import static utils.Constants.DEFAULT_FILE;
 import static utils.Constants.DEFAULT_PATH;
 
 /**
- * Класс, работающий с файлом
+ * Класс для инициализации и хранения пути к файлу коллекции
  *
  * @author Базанов Евгений
  */
@@ -17,6 +17,11 @@ public class FileManager {
     private String path;
     private File file;
 
+    /**
+     * Конструктор проверяет путь к файлу коллекции, и проверяет файл коллекции.
+     *
+     * @param args аргументы командной строки
+     */
     public FileManager(String[] args) {
         if (args.length == 0) {
             System.err.println("Не переданны аргументы командной строки, используется стандартный файл");

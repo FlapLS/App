@@ -7,7 +7,7 @@ import managers.IOManager;
 import java.util.stream.Collectors;
 
 /**
- * Класс описывающий конкретную реализацию команды print unique chapter.
+ * Класс, описывающий конкретную реализацию команды print unique chapter.
  *
  * @author Базанов Евгений.
  */

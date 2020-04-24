@@ -10,7 +10,7 @@ import java.io.*;
 import java.util.Scanner;
 
 /**
- * Класс, предназначенный для парсинга объектов типа SpaceMarine в файл формата xml и обратно
+ * Класс, предназначенный для парсинга объектов типа {@link entities.SpaceMarine} в файл формата xml и обратно
  *
  * @author Базанов Евгений
  */
@@ -33,7 +33,8 @@ public class Parser {
      * Метод для парсинга данных из объекта в xml
      *
      * @param marine объект типа SpaceMarine
-     * @return //TODO ОПИСАТЬ
+     *
+     * @return строку в xml формате
      */
     private static String convertObjectToXml(CollectionSpaceMarines marine) {
         try {
@@ -50,9 +51,10 @@ public class Parser {
     }
 
     /**
-     * Метод для парсинга из xml в объект
+     * Метод для парсинга из xml файла в объект
      *
-     * @param file //TODO ДОПИСАТЬ
+     * @param file файл в формате xml с сериализованным представлением объекта CollectionSpaceMarines
+     *
      * @return объект типа CollectionSpaceMarines
      */
     public static CollectionSpaceMarines parseXmlFile(File file) {
@@ -66,7 +68,7 @@ public class Parser {
             return (CollectionSpaceMarines) unmarshaller.unmarshal(new StringReader(builder.toString()));
         } catch (JAXBException e) {
             System.err.println("Ошибка при парсинге XML файла, загруженна пустая коллекция");
-            return CollectionSpaceMarines.emptyCollection();
+            return new CollectionSpaceMarines();
         } catch (FileNotFoundException e) {
             throw new RuntimeException("Указан невенрый путь к файлу");
         }

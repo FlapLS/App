@@ -10,20 +10,20 @@ import static utils.Parser.parseXmlFile;
 
 /**
  * Класс, предназначенный для управления коллекцией и обладающий свойствами
- * dateTime, filepath
+ * creationTime, filepath
  *
  * @author Базанов Евгений
  */
 public class CollectionManager {
     private CollectionSpaceMarines collection;
-    private final OffsetDateTime dateTime;
+    private final OffsetDateTime creationTime;
     private final String filePath;
 
     public CollectionManager(FileManager fileManager) {
-        dateTime = OffsetDateTime.now();
+        creationTime = OffsetDateTime.now();
         collection = parseXmlFile(fileManager.getFile());
         if (!collection.isAllElementsValid()) {
-            collection = CollectionSpaceMarines.emptyCollection();
+            collection = new CollectionSpaceMarines();
             System.err.println("Значения в файле не валидны, загруженна пустая коллекция");
         }
         this.filePath = fileManager.getPath();
@@ -47,8 +47,8 @@ public class CollectionManager {
         return collection.getMarines().size();
     }
 
-    public OffsetDateTime getDateTime() {
-        return dateTime;
+    public OffsetDateTime getCreationTime() {
+        return creationTime;
     }
 
     public CollectionSpaceMarines getCollection() {
@@ -59,7 +59,7 @@ public class CollectionManager {
      * Метод, реализующий отчищение коллекции
      */
     public void clear() {
-        collection = CollectionSpaceMarines.emptyCollection();
+        collection = new CollectionSpaceMarines();
     }
 
     /**

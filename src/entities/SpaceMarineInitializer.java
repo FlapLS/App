@@ -5,7 +5,7 @@ import managers.IOManager;
 import java.time.LocalDate;
 
 /**
- * Класс для проверки правильности введеных данных для класса SpaceMarine
+ * Класс служит для инициализации объекта SpaceMarine с помощью средств ввода-вывода
  *
  * @author Базанов Евгений
  */

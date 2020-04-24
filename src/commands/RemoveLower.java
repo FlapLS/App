@@ -6,7 +6,7 @@ import managers.CollectionManager;
 import managers.IOManager;
 
 /**
- * Класс описывающий конкретную реализацию команды remove lower.
+ * Класс, описывающий конкретную реализацию команды remove lower.
  *
  * @author Базанов Евгений.
  */

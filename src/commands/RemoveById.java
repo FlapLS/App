@@ -4,7 +4,7 @@ import managers.CollectionManager;
 import managers.IOManager;
 
 /**
- * Класс описывающий конкретную реализацию команды remove by id.
+ * Класс, описывающий конкретную реализацию команды remove by id.
  *
  * @author Базанов Евгений.
  */
