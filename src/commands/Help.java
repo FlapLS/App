@@ -4,6 +4,7 @@ import managers.CollectionManager;
 import managers.IOManager;
 
 import java.util.Set;
+
 /**
  * Класс описывающий конкретную реализацию команды help.
  *
@@ -23,7 +24,6 @@ public class Help extends Command {
 
     @Override
     public void execute(String... args) {
-        //TODO РАЗОБРАТЬ
         commands.forEach(command -> io.result.printf("%s %s : %s%n", command.commandName, command.arguments, command.info));
     }
 }
