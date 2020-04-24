@@ -16,12 +16,13 @@ public abstract class Command {
     protected final IOManager io;
 
     /**
-     *Конструктор ,который будет вызываться при наследования свойст абстрактного класса Command
+     * Конструктор ,который будет вызываться при наследования свойст абстрактного класса Command
+     *
      * @param commandName название команды.
-     * @param info описание команды
-     * @param arguments аргументы, принимаемые командой
-     * @param manager менеджер коллекции с которой будет работать команда
-     * @param scanner менеджер который будет работать с потокамми ввода/ввыода
+     * @param info        описание команды
+     * @param arguments   аргументы, принимаемые командой
+     * @param manager     менеджер коллекции с которой будет работать команда
+     * @param scanner     менеджер который будет работать с потокамми ввода/ввыода
      */
     protected Command(String commandName, String info, String arguments, CollectionManager manager, IOManager scanner) {
         this.commandName = commandName;
@@ -33,6 +34,7 @@ public abstract class Command {
 
     /**
      * Абстрактный метод, определяющий реализацию выполняемой команды
+     *
      * @param args обозначает аргументы для введенной команды
      */
     public abstract void execute(String... args);

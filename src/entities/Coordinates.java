@@ -1,5 +1,6 @@
 package entities;
 //TODO ДОДЕЛАТЬ JOC
+
 import managers.IOManager;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -16,9 +17,9 @@ public class Coordinates {
     private Long y; //Максимальное значение поля: 72, Поле не может быть null
 
     /**
-     *Метод,реализующий инициализацию полей класса Coordinates
-     * @param ioManager
+     * Метод,реализующий инициализацию полей класса Coordinates
      *
+     * @param ioManager
      * @return инициализированные поля класса Coordinates
      */
     public static Coordinates initCoordinates(IOManager ioManager) {
@@ -29,7 +30,8 @@ public class Coordinates {
     }
 
     /**
-     **Метод,реализующий инициализацию поля x класса Coordinates
+     * *Метод,реализующий инициализацию поля x класса Coordinates
+     *
      * @param io
      */
     private void initCoordinateX(IOManager io) {
@@ -43,7 +45,8 @@ public class Coordinates {
     }
 
     /**
-     *Метод,реализующий инициализацию поля y класса Coordinates
+     * Метод,реализующий инициализацию поля y класса Coordinates
+     *
      * @param io
      */
     private void initCoordinateY(IOManager io) {
@@ -62,7 +65,8 @@ public class Coordinates {
         }
     }
 
-    /**метод ,проверяющий правильность вводимых полей
+    /**
+     * метод ,проверяющий правильность вводимых полей
      *
      * @return true в случаи правильного ввода всех полей ,false в случаи не соблюдений ввода полей
      */

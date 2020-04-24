@@ -4,6 +4,7 @@ import entities.SpaceMarine;
 import entities.SpaceMarineInitializer;
 import managers.CollectionManager;
 import managers.IOManager;
+
 /**
  * Класс описывающий конкретную реализацию команды remove lower.
  *

@@ -2,6 +2,7 @@ package managers;
 
 import java.io.PrintStream;
 import java.util.Scanner;
+
 //TODO ДЛЕАТЬ DOC
 public class IOManager {
     public final PrintStreamWrapper interactive;
@@ -15,23 +16,29 @@ public class IOManager {
     }
 
     /**
-     *
      * @return
      */
     public String nextLine() {
         return input.nextLine();
     }
 
+    /**
+     * @return
+     */
     public boolean inputReady() {
         return input.hasNext();
     }
 
+    /**
+     * @param paramName
+     * @return
+     */
     public String requestParameter(String paramName) {
         interactive.printf("Введите %s: ", paramName);
         return input.nextLine();
     }
 
-    public  class PrintStreamWrapper {
+    public class PrintStreamWrapper {
         private final PrintStream wrapped;
 
         private PrintStreamWrapper(PrintStream wrapped) {
@@ -46,7 +53,7 @@ public class IOManager {
             wrapped.println(x);
         }
 
-        public void printf(String format, Object ... args) {
+        public void printf(String format, Object... args) {
             wrapped.printf(format, args);
         }
     }

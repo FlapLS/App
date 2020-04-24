@@ -1,5 +1,6 @@
 package entities;
 //TODO DOC
+
 import managers.IOManager;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -7,6 +8,7 @@ import java.util.Objects;
 
 /**
  * Класс для описание главы SpaceMarine
+ *
  * @author Базанов Евгений
  */
 public class Chapter {
@@ -18,7 +20,7 @@ public class Chapter {
     private String world; //Поле может быть null
 
     /**
-     *метод ,проверяющий правильность вводимых полей
+     * метод ,проверяющий правильность вводимых полей
      *
      * @return true в случаи правильного ввода всех полей ,false в случаи не соблюдений ввода полей
      */
@@ -33,7 +35,8 @@ public class Chapter {
     }
 
     /**
-     *Метод,реализующий инициализацию полей класса Chapter
+     * Метод,реализующий инициализацию полей класса Chapter
+     *
      * @param io
      * @return инициализированные поля класса Chapter
      */
@@ -46,7 +49,7 @@ public class Chapter {
     }
 
     /**
-     *Метод,реализующий инициализацию поля name класса Chapter
+     * Метод,реализующий инициализацию поля name класса Chapter
      *
      * @param io
      */
@@ -61,7 +64,7 @@ public class Chapter {
     }
 
     /**
-     *Метод,реализующий инициализацию поля marinesCount класса Chapter
+     * Метод,реализующий инициализацию поля marinesCount класса Chapter
      *
      * @param io
      */
@@ -84,7 +87,7 @@ public class Chapter {
     }
 
     /**
-     *Метод,реализующий инициализацию поля world класса Chapter
+     * Метод,реализующий инициализацию поля world класса Chapter
      *
      * @param io
      */

@@ -81,7 +81,6 @@ public class CommandManager {
      * Метод,реализуюший идентификацию команды
      *
      * @param commandName название команды
-     *
      * @return название комманды или null в случаи неправильного ввода команды
      */
     public Command findCommand(String commandName) {

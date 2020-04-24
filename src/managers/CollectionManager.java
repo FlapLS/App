@@ -7,9 +7,10 @@ import java.time.OffsetDateTime;
 import java.util.Random;
 
 import static utils.Parser.parseXmlFile;
+
 /**
  * Класс, предназначенный для управления коллекцией и обладающий свойствами
- *  dateTime, filepath
+ * dateTime, filepath
  *
  * @author Базанов Евгений
  */
@@ -56,7 +57,6 @@ public class CollectionManager {
 
     /**
      * Метод,реализующий отчищение коллекции
-     *
      */
     public void clear() {
         collection = CollectionSpaceMarines.emptyCollection();

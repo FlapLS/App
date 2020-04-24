@@ -1,4 +1,5 @@
 package entities;
+
 /**
  * Перечисляемый тип для задания значений AstartesCategory
  * у объектов типа SpaceMarine

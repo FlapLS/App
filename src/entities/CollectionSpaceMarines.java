@@ -1,18 +1,19 @@
 package entities;
 //TODO DOC
+
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayDeque;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-@XmlRootElement(name="SpaceMarineCollection")
+@XmlRootElement(name = "SpaceMarineCollection")
 public class CollectionSpaceMarines {
     @XmlElement(name = "SpaceMarine")
     private ArrayDeque<SpaceMarine> marines = new ArrayDeque<>();
 
     /**
-     *Метод отчищающий колеккцию
+     * Метод отчищающий колеккцию
      *
      * @return пустую коллекцию
      */
@@ -28,7 +29,7 @@ public class CollectionSpaceMarines {
     }
 
     /**
-     *Метод,необходимый для реализации команд add и add_if_max
+     * Метод,необходимый для реализации команд add и add_if_max
      *
      * @param marine
      */
@@ -37,7 +38,6 @@ public class CollectionSpaceMarines {
     }
 
     /**
-     *
      * @param predicate
      * @return
      */
@@ -46,7 +46,6 @@ public class CollectionSpaceMarines {
     }
 
     /**
-     *
      * @return
      */
     public boolean isAllElementsValid() {

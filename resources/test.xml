@@ -90,4 +90,22 @@
             <world>E</world>
         </chapter>
     </SpaceMarine>
+    <SpaceMarine>
+        <id>1883544763</id>
+        <name>kek</name>
+        <creationDate>2020-04-24</creationDate>
+        <coordinates>
+            <x>2</x>
+            <y>2</y>
+        </coordinates>
+        <health>1.0</health>
+        <achievements>1</achievements>
+        <height>1</height>
+        <category>ASSAULT</category>
+        <chapter>
+            <name>MOON</name>
+            <marinesCount>4</marinesCount>
+            <world>EARTH</world>
+        </chapter>
+    </SpaceMarine>
 </SpaceMarineCollection>
