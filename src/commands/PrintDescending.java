@@ -15,6 +15,7 @@ public class PrintDescending extends Command {
         super("print_descending",
                 "вывести элементы коллекции в порядке убывания",
                 "",
+                0,
                 manager,
                 ioManager);
     }

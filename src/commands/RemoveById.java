@@ -13,16 +13,13 @@ public class RemoveById extends Command {
         super("remove_by_id",
                 "удалить элемент из коллекции по его id",
                 "id",
+                1,
                 manager,
                 ioManager);
     }
 
     @Override
     public void execute(String... args) {
-        if (args.length != 1) {
-            io.getResult().println("Команда принимает только один аргумент");
-            return;
-        }
         try {
             boolean isDeleted = manager.getCollection()
                     .removeMarineByPredicate(marine -> marine.getId() == Integer.parseInt(args[0]));

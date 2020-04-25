@@ -16,6 +16,7 @@ public class PrintUniqueChapter extends Command {
         super("print_unique_chapter",
                 "вывести уникальные значения поля chapter всех элементов в коллекции",
                 "",
+                0,
                 manager,
                 ioManager);
     }

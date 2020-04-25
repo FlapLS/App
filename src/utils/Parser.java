@@ -33,7 +33,6 @@ public class Parser {
      * Метод для парсинга данных из объекта в xml.
      *
      * @param marine объект типа SpaceMarine.
-     *
      * @return строку в xml формате.
      */
     private static String convertObjectToXml(CollectionSpaceMarines marine) {
@@ -54,7 +53,6 @@ public class Parser {
      * Метод для парсинга из xml файла в объект.
      *
      * @param file файл в формате xml с сериализованным представлением объекта CollectionSpaceMarines.
-     *
      * @return объект типа CollectionSpaceMarines.
      */
     public static CollectionSpaceMarines parseXmlFile(File file) {

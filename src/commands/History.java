@@ -16,6 +16,7 @@ public class History extends Command {
         super("history",
                 " вывести последние 7 команд (без их аргументов)",
                 "",
+                0,
                 manager,
                 ioManager);
         this.history = history;

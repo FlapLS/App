@@ -15,6 +15,7 @@ public class AddIfMax extends Command {
         super("add_if_max",
                 "добавить новый элемент в коллекцию, если его значение превышает значение наибольшего элемента этой коллекции",
                 "{element}",
+                0,
                 manager,
                 ioManager);
     }

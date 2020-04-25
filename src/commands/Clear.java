@@ -13,6 +13,7 @@ public class Clear extends Command {
         super("clear",
                 "очистить коллекцию",
                 "",
+                0,
                 manager,
                 ioManager);
     }

@@ -13,6 +13,7 @@ public class Exit extends Command {
         super("exit",
                 "завершить программу (без сохранения в файл)",
                 "",
+                0,
                 manager,
                 ioManager);
     }

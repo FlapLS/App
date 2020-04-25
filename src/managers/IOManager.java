@@ -37,7 +37,6 @@ public class IOManager {
      * Метод в интерактивном режиме запрашивает параметр
      *
      * @param paramName имя параметр
-     *
      * @return введеную пользователем строку
      */
     public String requestParameter(String paramName) {

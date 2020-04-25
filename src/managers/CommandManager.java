@@ -17,6 +17,7 @@ public class CommandManager {
     private final CommandsHistory lastCommands = new CommandsHistory();
     private final IOManager io;
 
+
     public CommandManager(CollectionManager manager, IOManager io) {
         this.io = io;
         commands.add(new Info(manager, io));
@@ -35,6 +36,7 @@ public class CommandManager {
         commands.add(new AddIfMax(manager, io));
         commands.add(new Save(manager, io));
         commands.add(new ExecuteScript(manager, io));
+
     }
 
     /**
@@ -50,6 +52,10 @@ public class CommandManager {
             Command ongoingCommand = findCommand(commandName);
             if (ongoingCommand == null) {
                 io.getResult().println("Неизвестная команда, чтобы посмотреть список команд введите help");
+                continue;
+            }
+            if (commandArgs.length != ongoingCommand.getArgumentsCount()) {
+                io.getResult().printf("Переданно неверное количество аргументов, ожидается: " + ongoingCommand.getArgumentsCount());
                 continue;
             }
             ongoingCommand.execute(commandArgs);
@@ -72,6 +78,10 @@ public class CommandManager {
                 io.getResult().println("Неизвестная команда, чтобы посмотреть список команд введите help");
                 continue;
             }
+            if (commandArgs.length != ongoingCommand.getArgumentsCount()) {
+                io.getResult().printf("Переданно неверное количество аргументов, ожидается: " + ongoingCommand.getArgumentsCount());
+                continue;
+            }
             ongoingCommand.execute(commandArgs);
             lastCommands.addCommand(ongoingCommand);
         } while (io.inputReady());
@@ -87,4 +97,6 @@ public class CommandManager {
         return commands.stream().filter(c -> c.getCommandName().equals(commandName))
                 .findAny().orElse(null);
     }
+
+
 }

@@ -15,6 +15,7 @@ public class RemoveLower extends Command {
         super("remove_lower",
                 "удалить из коллекции все элементы, меньшие, чем заданный",
                 "{element}",
+                0,
                 manager,
                 ioManager);
     }

@@ -15,8 +15,10 @@ public class Add extends Command {
         super("add",
                 "добавить новый элемент в коллекцию",
                 "{element}",
+                0,
                 manager,
-                ioManager);
+                ioManager
+        );
     }
 
     @Override

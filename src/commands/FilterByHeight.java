@@ -13,16 +13,13 @@ public class FilterByHeight extends Command {
         super("filter_by_height",
                 "вывести элементы, значение поля height которых равно заданному",
                 "height",
+                1,
                 manager,
                 IOManager);
     }
 
     @Override
     public void execute(String... args) {
-        if (args.length != 1) {
-            io.getResult().println("Команда принимает только один аргумент");
-            return;
-        }
         try {
             long expectedHeight = Long.parseLong(args[0]);
             manager.getCollection().getMarines().stream()

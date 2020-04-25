@@ -17,6 +17,7 @@ public class Help extends Command {
         super("help",
                 "вывести справку по доступным командам",
                 "",
+                1,
                 manager,
                 ioManager);
         this.commands = commands;

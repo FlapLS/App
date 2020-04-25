@@ -20,7 +20,6 @@ public class Coordinates {
      * Метод, реализующий инициализацию полей класса Coordinates.
      *
      * @param ioManager //TODO менеджер ввода-вывода.
-     *
      * @return инициализированные поля класса Coordinates.
      */
     public static Coordinates initCoordinates(IOManager ioManager) {

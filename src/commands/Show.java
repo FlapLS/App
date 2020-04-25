@@ -13,6 +13,7 @@ public class Show extends Command {
         super("show",
                 "вывести в стандартный поток вывода все элементы коллекции в строковом представлении",
                 "",
+                0,
                 manager,
                 ioManager);
     }

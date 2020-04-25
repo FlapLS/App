@@ -13,6 +13,7 @@ public class Save extends Command {
         super("save",
                 "сохранить коллекцию в файл",
                 "",
+                0,
                 manager,
                 ioManager);
     }

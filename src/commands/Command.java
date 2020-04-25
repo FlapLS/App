@@ -12,6 +12,7 @@ public abstract class Command {
     protected final String commandName;
     protected final String info;
     protected final String arguments;
+    protected final int argumentsCount;
     protected final CollectionManager manager;
     protected final IOManager io;
 
@@ -24,16 +25,21 @@ public abstract class Command {
      * @param manager     менеджер коллекции с которой будет работать команда.
      * @param scanner     менеджер который будет работать с потокамми ввода/ввыода.
      */
-    protected Command(String commandName, String info, String arguments, CollectionManager manager, IOManager scanner) {
+    protected Command(String commandName, String info, String arguments, int argumentsCount, CollectionManager manager, IOManager scanner) {
         this.commandName = commandName;
         this.info = info;
         this.arguments = arguments;
+        this.argumentsCount = argumentsCount;
         this.manager = manager;
         io = scanner;
     }
 
     public String getCommandName() {
         return commandName;
+    }
+
+    public int getArgumentsCount() {
+        return argumentsCount;
     }
 
     /**

@@ -38,7 +38,6 @@ public class Chapter {
      * Метод, реализующий инициализации объекта Chapter.
      *
      * @param io менеджер ввода-вывода.
-     *
      * @return инициализированный объект Chapter.
      */
     public static Chapter initChapter(IOManager io) {
