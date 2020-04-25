@@ -7,7 +7,7 @@ import managers.IOManager;
 /**
  * Класс, описывающий конкретную реализацию команды update.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public class Update extends Command {
     public Update(CollectionManager manager, IOManager ioManager) {

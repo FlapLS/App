@@ -6,7 +6,7 @@ import managers.IOManager;
 /**
  * Класс, описывающий конкретную реализацию команды clear.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public class Clear extends Command {
     public Clear(CollectionManager manager, IOManager ioManager) {

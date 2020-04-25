@@ -8,7 +8,7 @@ import managers.IOManager;
 /**
  * Класс, описывающий конкретную реализацию команды add if max.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public class AddIfMax extends Command {
     public AddIfMax(CollectionManager manager, IOManager ioManager) {

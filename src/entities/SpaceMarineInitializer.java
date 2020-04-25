@@ -5,9 +5,9 @@ import managers.IOManager;
 import java.time.LocalDate;
 
 /**
- * Класс служит для инициализации объекта SpaceMarine с помощью средств ввода-вывода
+ * Класс служит для инициализации объекта SpaceMarine с помощью средств ввода-вывода.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public class SpaceMarineInitializer {
     private SpaceMarine marine = new SpaceMarine();
@@ -20,9 +20,9 @@ public class SpaceMarineInitializer {
     }
 
     /**
-     * Метод, реализующий инициализацию полей класса SpaceMarine
+     * Метод, реализующий инициализацию полей класса SpaceMarine.
      *
-     * @return инициализированные поля класса SpaceMarine
+     * @return инициализированные поля класса SpaceMarine.
      */
     public SpaceMarine initialize() {
         marine.setName(initName());
@@ -36,9 +36,9 @@ public class SpaceMarineInitializer {
     }
 
     /**
-     * Метод,реализующий инициализацию поля name класса SpaceMarine
+     * Метод, реализующий инициализацию поля name класса SpaceMarine.
      *
-     * @return поле name
+     * @return поле name.
      */
     private String initName() {
         String name = io.requestParameter("name");
@@ -50,9 +50,9 @@ public class SpaceMarineInitializer {
     }
 
     /**
-     * Метод,реализующий инициализацию поля health класса SpaceMarine
+     * Метод, реализующий инициализацию поля health класса SpaceMarine.
      *
-     * @return поле health
+     * @return поле health.
      */
     private float initHealth() {
         String healthString = io.requestParameter("health");
@@ -71,9 +71,9 @@ public class SpaceMarineInitializer {
     }
 
     /**
-     * Метод,реализующий инициализацию поля achievements класса SpaceMarine
+     * Метод, реализующий инициализацию поля achievements класса SpaceMarine.
      *
-     * @return поле achievement
+     * @return поле achievement.
      */
     private String initAchievements() {
         String achievements = io.requestParameter("achievements");
@@ -85,9 +85,9 @@ public class SpaceMarineInitializer {
     }
 
     /**
-     * Метод,реализующий инициализацию поля height класса SpaceMarine
+     * Метод, реализующий инициализацию поля height класса SpaceMarine.
      *
-     * @return поле height
+     * @return поле height.
      */
     private long initHeight() {
         final String height = io.requestParameter("height");
@@ -100,9 +100,9 @@ public class SpaceMarineInitializer {
     }
 
     /**
-     * Метод,реализующий инициализацию поля category класса SpaceMarine
+     * Метод, реализующий инициализацию поля category класса SpaceMarine.
      *
-     * @return поле category
+     * @return поле category.
      */
     private AstartesCategory initCategory() {
         final String categoryString = io.requestParameter(

@@ -6,7 +6,7 @@ import managers.IOManager;
 /**
  * Класс, описывающий конкретную реализацию команды show.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public class Show extends Command {
     public Show(CollectionManager manager, IOManager ioManager) {

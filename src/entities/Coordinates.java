@@ -6,9 +6,9 @@ import managers.IOManager;
 import javax.xml.bind.annotation.XmlElement;
 
 /**
- * Класс с координатами SpaceMarine
+ * Класс с координатами SpaceMarine.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public class Coordinates {
     @XmlElement
@@ -17,10 +17,11 @@ public class Coordinates {
     private Long y; //Максимальное значение поля: 72, Поле не может быть null
 
     /**
-     * Метод, реализующий инициализацию полей класса Coordinates
+     * Метод, реализующий инициализацию полей класса Coordinates.
      *
-     * @param ioManager
-     * @return инициализированные поля класса Coordinates
+     * @param ioManager //TODO менеджер ввода-вывода.
+     *
+     * @return инициализированные поля класса Coordinates.
      */
     public static Coordinates initCoordinates(IOManager ioManager) {
         final Coordinates coordinates = new Coordinates();
@@ -30,9 +31,9 @@ public class Coordinates {
     }
 
     /**
-     * *Метод, реализующий инициализацию поля x класса Coordinates
+     * *Метод, реализующий инициализацию поля x класса Coordinates.
      *
-     * @param io
+     * @param io менеджер ввода-вывода.
      */
     private void initCoordinateX(IOManager io) {
         final String coordinate = io.requestParameter("coordinates.x");
@@ -45,9 +46,9 @@ public class Coordinates {
     }
 
     /**
-     * Метод, реализующий инициализацию поля y класса Coordinates
+     * Метод, реализующий инициализацию поля y класса Coordinates.
      *
-     * @param io
+     * @param io менеджер ввода-вывода.
      */
     private void initCoordinateY(IOManager io) {
         final String coordinate = io.requestParameter("coordinates.y");
@@ -66,7 +67,7 @@ public class Coordinates {
     }
 
     /**
-     * метод, проверяющий правильность вводимых полей
+     * Метод, проверяющий правильность вводимых полей
      *
      * @return true в случаи правильного ввода всех полей, false в случаи не соблюдений ввода полей
      */

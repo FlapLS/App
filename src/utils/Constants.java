@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 /**
  * Классе хранит путь к файлу коллекции по умолчанию, и прочитанный файл коллекции по умолчанию.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public class Constants {
     public static final String DEFAULT_PATH = Paths.get("./resources/default.xml").toAbsolutePath().toString();

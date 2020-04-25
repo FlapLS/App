@@ -8,7 +8,7 @@ import managers.IOManager;
 /**
  * Класс, описывающий конкретную реализацию команды add.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public class Add extends Command {
     public Add(CollectionManager manager, IOManager ioManager) {

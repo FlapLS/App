@@ -8,7 +8,7 @@ import java.util.Set;
 /**
  * Класс, описывающий конкретную реализацию команды help.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public class Help extends Command {
     private Set<Command> commands;

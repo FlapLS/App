@@ -8,9 +8,9 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 /**
- * Класс-хранилище коллекции объектов SpaceMarine
+ * Класс-хранилище коллекции объектов SpaceMarine.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 @XmlRootElement(name = "SpaceMarineCollection")
 public class CollectionSpaceMarines {
@@ -18,24 +18,26 @@ public class CollectionSpaceMarines {
     private ArrayDeque<SpaceMarine> marines = new ArrayDeque<>();
 
     /**
-     * геттер, возвращающий копию массива элементов
-     *
+     * Геттер, возвращающий копию массива элементов.
      */
     public ArrayDeque<SpaceMarine> getMarines() {
         return marines.clone();
     }
 
     /**
-     * Метод для добавления элемента в коллекцию
+     * Метод для добавления элемента в коллекцию.
      *
-     * @param marine объект который будет добавлен в коллекцию
+     * @param marine объект который будет добавлен в коллекцию.
      */
     public void addMarine(SpaceMarine marine) {
         marines.add(marine);
     }
 
     /**
+     *
+     *
      * @param predicate
+     *
      * @return
      */
     public boolean removeMarineByPredicate(Predicate<SpaceMarine> predicate) {
@@ -50,7 +52,7 @@ public class CollectionSpaceMarines {
     }
 
     /**
-     * Метод, реализовывающий сортировку по возрастанию
+     * Метод, реализовывающий сортировку по возрастанию.
      */
     public void sort() {
         marines = marines.stream().sorted().collect(Collectors.toCollection(ArrayDeque::new));

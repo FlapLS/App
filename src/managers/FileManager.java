@@ -9,9 +9,9 @@ import static utils.Constants.DEFAULT_FILE;
 import static utils.Constants.DEFAULT_PATH;
 
 /**
- * Класс для инициализации и хранения пути к файлу коллекции
+ * Класс для инициализации и хранения пути к файлу коллекции.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public class FileManager {
     private String path;
@@ -20,7 +20,7 @@ public class FileManager {
     /**
      * Конструктор проверяет путь к файлу коллекции, и проверяет файл коллекции.
      *
-     * @param args аргументы командной строки
+     * @param args аргументы командной строки.
      */
     public FileManager(String[] args) {
         if (args.length == 0) {

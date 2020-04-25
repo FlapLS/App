@@ -10,7 +10,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Класс, предназначеный для вызова команд, работающих с колекцией
+ * Класс, предназначеный для вызова команд, работающих с колекцией.
+ *
+ * @author Базанов Евгений.
  */
 public class CommandManager {
     private final Set<Command> commands = new HashSet<>();
@@ -38,7 +40,7 @@ public class CommandManager {
     }
 
     /**
-     * Метод,реализуюший выполнение команд
+     * Метод,реализуюший выполнение команд.
      */
     public void start() {
         while (true) {
@@ -58,7 +60,7 @@ public class CommandManager {
     }
 
     /**
-     * Метод,реализуюший выполнение команды execute script
+     * Метод,реализуюший выполнение команды execute script.
      */
     public void executeScript() {
         do {
@@ -78,10 +80,10 @@ public class CommandManager {
     }
 
     /**
-     * Метод,реализуюший идентификацию команды
+     * Метод,реализуюший идентификацию команды.
      *
-     * @param commandName название команды
-     * @return название комманды или null в случаи неправильного ввода команды
+     * @param commandName название команды.
+     * @return название комманды или null в случаи неправильного ввода команды.
      */
     public Command findCommand(String commandName) {
         return commands.stream().filter(c -> c.commandName.equals(commandName))

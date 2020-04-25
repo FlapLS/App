@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
 /**
  * Класс, описывающий конкретную реализацию команды info.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public class Info extends Command {
     public Info(CollectionManager manager, IOManager ioManager) {

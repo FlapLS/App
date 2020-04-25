@@ -6,7 +6,7 @@ import managers.IOManager;
 /**
  * Класс, описывающий конкретную реализацию команды save.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public class Save extends Command {
     public Save(CollectionManager manager, IOManager ioManager) {

@@ -7,18 +7,18 @@ import java.util.Queue;
 import java.util.stream.Collectors;
 
 /**
- * Вспомогательный класс для реализации команды history
+ * Вспомогательный класс для реализации команды history.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public class CommandsHistory {
     private final static int size = 7;
     final Queue<Command> history = new LinkedList<>();
 
     /**
-     * Метод, реализуюший выполнение команды history
+     * Метод, реализуюший выполнение команды history.
      *
-     * @param command название команды
+     * @param command название команды.
      */
     public void addCommand(Command command) {
         if (history.size() >= 7) {

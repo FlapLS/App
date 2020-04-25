@@ -1,9 +1,9 @@
 package entities;
 
 /**
- * Перечисление ролей SpaceMarine
+ * Перечисление ролей SpaceMarine.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public enum AstartesCategory {
     DREADNOUGHT,

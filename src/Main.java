@@ -4,11 +4,12 @@ import managers.IOManager;
 import managers.CommandManager;
 
 import java.util.Scanner;
+
 /**
  * Главный класс программы, метод main котрого реализует работу консольного приложения для управления коллекцией объектов
- * в интерактивном режиме
+ * в интерактивном режиме.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public class Main {
     public static void main(String[] args) {

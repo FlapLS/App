@@ -8,9 +8,9 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
 /**
- * Класс,предназначенный для парсинга поля creationDate в файл формата xml и обратно
+ * Класс,предназначенный для парсинга поля creationDate в файл формата xml и обратно.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public class LocalDateAdapter extends XmlAdapter<String, LocalDate> {
     private DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");

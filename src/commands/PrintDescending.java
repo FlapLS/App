@@ -8,7 +8,7 @@ import java.util.Comparator;
 /**
  * Класс, описывающий конкретную реализацию команды print descending.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public class PrintDescending extends Command {
     public PrintDescending(CollectionManager manager, IOManager ioManager) {

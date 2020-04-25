@@ -1,5 +1,5 @@
 package entities;
-//TODO DOC
+
 
 import managers.IOManager;
 
@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlElement;
 import java.util.Objects;
 
 /**
- * Класс для описание главы SpaceMarine
+ * Класс для описание главы SpaceMarine.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public class Chapter {
     @XmlElement
@@ -20,9 +20,9 @@ public class Chapter {
     private String world; //Поле может быть null
 
     /**
-     * метод, проверяющий правильность вводимых полей
+     * Метод, проверяющий правильность вводимых полей.
      *
-     * @return true в случаи правильного ввода всех полей, false в случаи не соблюдений ввода полей
+     * @return true в случаи правильного ввода всех полей, false в случаи не соблюдений ввода полей.
      */
     public boolean isValuesValid() {
         if (name == null || name.isEmpty()) {
@@ -35,11 +35,11 @@ public class Chapter {
     }
 
     /**
-     * Метод, реализующий инициализации объекта Chapter
+     * Метод, реализующий инициализации объекта Chapter.
      *
-     * @param io менеджер ввода-вывода
+     * @param io менеджер ввода-вывода.
      *
-     * @return инициализированный объект Chapter
+     * @return инициализированный объект Chapter.
      */
     public static Chapter initChapter(IOManager io) {
         final Chapter chapter = new Chapter();
@@ -52,7 +52,7 @@ public class Chapter {
     /**
      * Метод, реализующий инициализацию поля name класса Chapter
      *
-     * @param io менеджер ввода-вывода
+     * @param io менеджер ввода-вывода.
      */
     private void initName(IOManager io) {
         String name = io.requestParameter("name для chapter");
@@ -65,9 +65,9 @@ public class Chapter {
     }
 
     /**
-     * Метод,реализующий инициализацию поля marinesCount класса Chapter
+     * Метод,реализующий инициализацию поля marinesCount класса Chapter.
      *
-     * @param io менеджер ввода-вывода
+     * @param io менеджер ввода-вывода.
      */
     private void initMarinesCount(IOManager io) {
         String stringCount = io.requestParameter("marinesCount для chapter");
@@ -88,9 +88,9 @@ public class Chapter {
     }
 
     /**
-     * Метод,реализующий инициализацию поля world класса Chapter
+     * Метод,реализующий инициализацию поля world класса Chapter.
      *
-     * @param io менеджер ввода-вывода
+     * @param io менеджер ввода-вывода.
      */
     private void initWorld(IOManager io) {
         String world = io.requestParameter("world для chapter");

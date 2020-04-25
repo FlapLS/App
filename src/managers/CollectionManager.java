@@ -10,9 +10,9 @@ import static utils.Parser.parseXmlFile;
 
 /**
  * Класс, предназначенный для управления коллекцией и обладающий свойствами
- * creationTime, filepath
+ * creationTime, filepath.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public class CollectionManager {
     private CollectionSpaceMarines collection;
@@ -30,9 +30,9 @@ public class CollectionManager {
     }
 
     /**
-     * Метод, реализуюший генерацию уникального id для поля id класса SpaceMarine
+     * Метод, реализуюший генерацию уникального id для поля id класса SpaceMarine.
      *
-     * @return поле id
+     * @return поле id.
      */
     public int getFreeRandomId() {
         final int potentialId = new Random().nextInt(Integer.MAX_VALUE);
@@ -56,14 +56,14 @@ public class CollectionManager {
     }
 
     /**
-     * Метод, реализующий отчищение коллекции
+     * Метод, реализующий отчищение коллекции.
      */
     public void clear() {
         collection = new CollectionSpaceMarines();
     }
 
     /**
-     * Метод, реализующий сохранение коллекции
+     * Метод, реализующий сохранение коллекции.
      */
     public void save() {
         Parser.saveXmlStringToFile(collection, filePath);

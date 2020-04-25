@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDate;
 
 /**
- * Класс SpaceMarine, объектами которого заполняется коллекция
+ * Класс SpaceMarine, объектами которого заполняется коллекция.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 @XmlRootElement(name = "SpaceMarine")
 @XmlType(propOrder = {"id", "name", "creationDate", "coordinates", "health", "achievements", "height", "category", "chapter"})
@@ -112,9 +112,9 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
     }
 
     /**
-     * метод, проверяющей валидность значений полей объекта
+     * Метод, проверяющей валидность значений полей объекта.
      *
-     * @return true при валидности значений всех полей, в противном false
+     * @return true при валидности значений всех полей, в противном false.
      */
     public boolean isValuesValid() {
         if (id == null) {

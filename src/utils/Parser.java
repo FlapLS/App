@@ -10,16 +10,16 @@ import java.io.*;
 import java.util.Scanner;
 
 /**
- * Класс, предназначенный для парсинга объектов типа {@link entities.SpaceMarine} в файл формата xml и обратно
+ * Класс, предназначенный для парсинга объектов типа {@link entities.SpaceMarine} в файл формата xml и обратно.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public class Parser {
     /**
-     * Метод для сохранения данных в файл формата xml
+     * Метод для сохранения данных в файл формата xml.
      *
-     * @param marine объект типа SpaceMarine
-     * @param path   путь к файлу
+     * @param marine объект типа SpaceMarine.
+     * @param path   путь к файлу.
      */
     public static void saveXmlStringToFile(CollectionSpaceMarines marine, String path) {
         try (OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(path))) {
@@ -30,11 +30,11 @@ public class Parser {
     }
 
     /**
-     * Метод для парсинга данных из объекта в xml
+     * Метод для парсинга данных из объекта в xml.
      *
-     * @param marine объект типа SpaceMarine
+     * @param marine объект типа SpaceMarine.
      *
-     * @return строку в xml формате
+     * @return строку в xml формате.
      */
     private static String convertObjectToXml(CollectionSpaceMarines marine) {
         try {
@@ -51,11 +51,11 @@ public class Parser {
     }
 
     /**
-     * Метод для парсинга из xml файла в объект
+     * Метод для парсинга из xml файла в объект.
      *
-     * @param file файл в формате xml с сериализованным представлением объекта CollectionSpaceMarines
+     * @param file файл в формате xml с сериализованным представлением объекта CollectionSpaceMarines.
      *
-     * @return объект типа CollectionSpaceMarines
+     * @return объект типа CollectionSpaceMarines.
      */
     public static CollectionSpaceMarines parseXmlFile(File file) {
         try (Scanner scanner = new Scanner(file)) {

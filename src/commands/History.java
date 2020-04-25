@@ -7,7 +7,7 @@ import utils.CommandsHistory;
 /**
  * Класс, описывающий конкретную реализацию команды history.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public class History extends Command {
     private CommandsHistory history;

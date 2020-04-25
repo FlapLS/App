@@ -15,7 +15,7 @@ import java.util.Scanner;
 /**
  * Класс, описывающий конкретную реализацию команды execute script.
  *
- * @author Базанов Евгений
+ * @author Базанов Евгений.
  */
 public class ExecuteScript extends Command {
     public ExecuteScript(CollectionManager manager, IOManager ioManager) {
