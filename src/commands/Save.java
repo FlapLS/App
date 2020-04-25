@@ -20,6 +20,6 @@ public class Save extends Command {
     @Override
     public void execute(String... args) {
         manager.save();
-        io.result.println("Коллекция успешно сохраннена");
+        io.getResult().println("Коллекция успешно сохраннена");
     }
 }

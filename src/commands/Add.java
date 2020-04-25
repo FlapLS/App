@@ -23,6 +23,6 @@ public class Add extends Command {
     public void execute(String... args) {
         final SpaceMarine marine = new SpaceMarineInitializer(io, manager.getFreeRandomId()).initialize();
         manager.getCollection().addMarine(marine);
-        io.result.println("Новый элемент добавлен в коллекцию");
+        io.getResult().println("Новый элемент добавлен в коллекцию");
     }
 }

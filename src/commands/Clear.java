@@ -20,5 +20,6 @@ public class Clear extends Command {
     @Override
     public void execute(String... args) {
         manager.clear();
+        io.getResult().println("Коллекция очищена");
     }
 }

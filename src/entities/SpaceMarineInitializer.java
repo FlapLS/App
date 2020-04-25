@@ -43,7 +43,7 @@ public class SpaceMarineInitializer {
     private String initName() {
         String name = io.requestParameter("name");
         if (name.isEmpty()) {
-            io.interactive.println("name не может быть null или пустой строкой");
+            io.getInteractive().println("name не может быть null или пустой строкой");
             return initName();
         }
         return name;
@@ -59,13 +59,13 @@ public class SpaceMarineInitializer {
         try {
             float health = Float.parseFloat(healthString);
             if (health < 0) {
-                io.interactive.println("health должен быть больше нуля");
+                io.getInteractive().println("health должен быть больше нуля");
                 return initHealth();
             } else {
                 return health;
             }
         } catch (NumberFormatException e) {
-            io.interactive.println("health должен быть типом с плавающей точкой");
+            io.getInteractive().println("health должен быть типом с плавающей точкой");
             return initHealth();
         }
     }
@@ -78,7 +78,7 @@ public class SpaceMarineInitializer {
     private String initAchievements() {
         String achievements = io.requestParameter("achievements");
         if (achievements.isEmpty()) {
-            io.interactive.println("achievements не может быть null или пустой строкой");
+            io.getInteractive().println("achievements не может быть null или пустой строкой");
             return initAchievements();
         }
         return achievements;
@@ -94,7 +94,7 @@ public class SpaceMarineInitializer {
         try {
             return Long.parseLong(height);
         } catch (NumberFormatException e) {
-            io.interactive.println("height долежен быть цельночисленным");
+            io.getInteractive().println("height долежен быть цельночисленным");
             return initHeight();
         }
     }
@@ -110,7 +110,7 @@ public class SpaceMarineInitializer {
         try {
             return AstartesCategory.valueOf(categoryString);
         } catch (IllegalArgumentException e) {
-            io.interactive.println("значение введено в неправильном формате");
+            io.getInteractive().println("значение введено в неправильном формате");
             return initCategory();
         }
     }

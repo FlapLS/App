@@ -20,16 +20,16 @@ public class FilterByHeight extends Command {
     @Override
     public void execute(String... args) {
         if (args.length != 1) {
-            io.result.println("Команда принимает только один аргумент");
+            io.getResult().println("Команда принимает только один аргумент");
             return;
         }
         try {
             long expectedHeight = Long.parseLong(args[0]);
             manager.getCollection().getMarines().stream()
                     .filter(marine -> marine.getHeight() == expectedHeight)
-                    .forEach(io.result::println);
+                    .forEach(io.getResult()::println);
         } catch (NumberFormatException e) {
-            io.result.println("Команда принимает только один цельночисленный id");
+            io.getResult().println("Команда принимает только один цельночисленный id");
         }
     }
 }

@@ -30,6 +30,6 @@ public class CommandsHistory {
 
     @Override
     public String toString() {
-        return history.stream().map(command -> command.commandName).collect(Collectors.joining("\n"));
+        return history.stream().map(Command::getCommandName).collect(Collectors.joining("\n"));
     }
 }

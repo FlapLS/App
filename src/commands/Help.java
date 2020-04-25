@@ -24,6 +24,6 @@ public class Help extends Command {
 
     @Override
     public void execute(String... args) {
-        commands.forEach(command -> io.result.printf("%s %s : %s%n", command.commandName, command.arguments, command.info));
+        commands.forEach(command -> io.getResult().printf("%s %s : %s%n", command.commandName, command.arguments, command.info));
     }
 }

@@ -40,7 +40,7 @@ public class Coordinates {
         try {
             this.x = Integer.parseInt(coordinate);
         } catch (NumberFormatException e) {
-            io.interactive.println("coordinates.x должен быть цельночисленным");
+            io.getInteractive().println("coordinates.x должен быть цельночисленным");
             initCoordinateX(io);
         }
     }
@@ -55,13 +55,13 @@ public class Coordinates {
         try {
             long y = Long.parseLong(coordinate);
             if (y >= 72) {
-                io.interactive.println("Максимальное значение coordinates.y - 72");
+                io.getInteractive().println("Максимальное значение coordinates.y - 72");
                 initCoordinateY(io);
                 return;
             }
             this.y = y;
         } catch (NumberFormatException e) {
-            io.interactive.println("coordinates.y долежен быть цельночисленным");
+            io.getInteractive().println("coordinates.y долежен быть цельночисленным");
             initCoordinateY(io);
         }
     }

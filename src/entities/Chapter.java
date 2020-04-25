@@ -57,7 +57,7 @@ public class Chapter {
     private void initName(IOManager io) {
         String name = io.requestParameter("name для chapter");
         if (name.isEmpty()) {
-            io.interactive.println("name не может быть null или пустой строкой");
+            io.getInteractive().println("name не может быть null или пустой строкой");
             initName(io);
             return;
         }
@@ -75,12 +75,12 @@ public class Chapter {
         try {
             count = Long.parseLong(stringCount);
             if (count < 0 || count > 1000) {
-                io.interactive.println("Значение marinesCount должно быть больше 0, Максимальное значение поля: 1000");
+                io.getInteractive().println("Значение marinesCount должно быть больше 0, Максимальное значение поля: 1000");
                 initMarinesCount(io);
                 return;
             }
         } catch (NumberFormatException e) {
-            io.interactive.println("marinesCount долежен быть цельночисленным");
+            io.getInteractive().println("marinesCount долежен быть цельночисленным");
             initMarinesCount(io);
             return;
         }
@@ -95,7 +95,7 @@ public class Chapter {
     private void initWorld(IOManager io) {
         String world = io.requestParameter("world для chapter");
         if (world.isEmpty()) {
-            io.interactive.println("world не может быть null или пустой строкой");
+            io.getInteractive().println("world не может быть null или пустой строкой");
             initWorld(io);
             return;
         }

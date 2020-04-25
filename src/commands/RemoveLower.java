@@ -24,9 +24,9 @@ public class RemoveLower extends Command {
         final SpaceMarine compared = new SpaceMarineInitializer(io, manager.getFreeRandomId()).initialize();
         boolean isDeleted = manager.getCollection().removeMarineByPredicate(marine -> (marine.compareTo(compared) < 0));
         if (isDeleted) {
-            io.result.println("Элемент(ы) успешно удален");
+            io.getResult().println("Элемент(ы) успешно удален");
         } else {
-            io.result.println("Не найдены элементы меньше введенного");
+            io.getResult().println("Не найдены элементы меньше введенного");
         }
     }
 }

@@ -1,8 +1,6 @@
 package managers;
 
 import commands.*;
-import managers.CollectionManager;
-import managers.IOManager;
 import utils.CommandsHistory;
 
 import java.util.Arrays;
@@ -51,7 +49,7 @@ public class CommandManager {
             String[] commandArgs = Arrays.copyOfRange(rawCommand, 1, rawCommand.length);
             Command ongoingCommand = findCommand(commandName);
             if (ongoingCommand == null) {
-                io.result.println("Неизвестная команда, чтобы посмотреть список команд введите help");
+                io.getResult().println("Неизвестная команда, чтобы посмотреть список команд введите help");
                 continue;
             }
             ongoingCommand.execute(commandArgs);
@@ -71,7 +69,7 @@ public class CommandManager {
             String[] commandArgs = Arrays.copyOfRange(rawCommand, 1, rawCommand.length);
             Command ongoingCommand = findCommand(commandName);
             if (ongoingCommand == null) {
-                io.result.println("Неизвестная команда, чтобы посмотреть список команд введите help");
+                io.getResult().println("Неизвестная команда, чтобы посмотреть список команд введите help");
                 continue;
             }
             ongoingCommand.execute(commandArgs);
@@ -86,7 +84,7 @@ public class CommandManager {
      * @return название комманды или null в случаи неправильного ввода команды.
      */
     public Command findCommand(String commandName) {
-        return commands.stream().filter(c -> c.commandName.equals(commandName))
+        return commands.stream().filter(c -> c.getCommandName().equals(commandName))
                 .findAny().orElse(null);
     }
 }

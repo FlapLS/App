@@ -9,9 +9,9 @@ import managers.IOManager;
  * @author Базанов Евгений.
  */
 public abstract class Command {
-    public final String commandName;
-    public final String info;
-    public final String arguments;
+    protected final String commandName;
+    protected final String info;
+    protected final String arguments;
     protected final CollectionManager manager;
     protected final IOManager io;
 
@@ -30,6 +30,10 @@ public abstract class Command {
         this.arguments = arguments;
         this.manager = manager;
         io = scanner;
+    }
+
+    public String getCommandName() {
+        return commandName;
     }
 
     /**

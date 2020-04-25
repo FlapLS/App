@@ -15,6 +15,8 @@ import java.util.Scanner;
 /**
  * Класс, описывающий конкретную реализацию команды execute script.
  *
+ * Команда аргументом принимает полный абсолютный путь к файлу.
+ *
  * @author Базанов Евгений.
  */
 public class ExecuteScript extends Command {
@@ -29,7 +31,7 @@ public class ExecuteScript extends Command {
     @Override
     public void execute(String... args) {
         if (args.length != 1) {
-            io.result.println("Команда принимает только один аргумент");
+            io.getResult().println("Команда принимает только один аргумент");
             return;
         }
         final String arg = args[0];

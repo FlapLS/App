@@ -21,8 +21,8 @@ public class Info extends Command {
 
     @Override
     public void execute(String... args) {
-        io.result.println("Тип коллекции: " + manager.getCollection().getClass());
-        io.result.println("Время инициализации коллекции: " + manager.getCreationTime().format(DateTimeFormatter.ISO_DATE_TIME));
-        io.result.println("Количество элементов: " + manager.getSize());
+        io.getResult().println("Тип коллекции: " + manager.getCollection().getClass());
+        io.getResult().println("Время инициализации коллекции: " + manager.getCreationTime().format(DateTimeFormatter.ISO_DATE_TIME));
+        io.getResult().println("Количество элементов: " + manager.getSize());
     }
 }

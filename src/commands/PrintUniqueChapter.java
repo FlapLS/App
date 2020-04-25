@@ -25,6 +25,6 @@ public class PrintUniqueChapter extends Command {
         manager.getCollection().getMarines().stream()
                 .map(SpaceMarine::getChapter)
                 .collect(Collectors.toSet())
-                .forEach(io.result::println);
+                .forEach(io.getResult()::println);
     }
 }

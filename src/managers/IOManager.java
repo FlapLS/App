@@ -3,10 +3,14 @@ package managers;
 import java.io.PrintStream;
 import java.util.Scanner;
 
-//TODO ДЛЕАТЬ DOC
+/**
+ * Класс для управления потоками ввода-вывода
+ *
+ * @author Базанов Евгений
+ */
 public class IOManager {
-    public final PrintStreamWrapper interactive;
-    public final PrintStreamWrapper result;
+    private final PrintStreamWrapper interactive;
+    private final PrintStreamWrapper result;
     private final Scanner input;
 
     public IOManager(PrintStream interactive, PrintStream result, Scanner input) {
@@ -16,29 +20,43 @@ public class IOManager {
     }
 
     /**
-     * @return
+     * Метод, получает строку из потока ввода
      */
     public String nextLine() {
         return input.nextLine();
     }
 
     /**
-     * @return
+     * Метод, проверяет готовность потока ввода
      */
     public boolean inputReady() {
         return input.hasNext();
     }
 
     /**
-     * @param paramName
-     * @return
+     * Метод в интерактивном режиме запрашивает параметр
+     *
+     * @param paramName имя параметр
+     *
+     * @return введеную пользователем строку
      */
     public String requestParameter(String paramName) {
-        interactive.printf("Введите %s: ", paramName);
+        getInteractive().printf("Введите %s: ", paramName);
         return input.nextLine();
     }
 
-    public class PrintStreamWrapper {
+    public PrintStreamWrapper getInteractive() {
+        return interactive;
+    }
+
+    public PrintStreamWrapper getResult() {
+        return result;
+    }
+
+    /**
+     * Класс обертка над потоком вывода, сохраняющая его состояние.
+     */
+    public static class PrintStreamWrapper {
         private final PrintStream wrapped;
 
         private PrintStreamWrapper(PrintStream wrapped) {

@@ -23,6 +23,6 @@ public class PrintDescending extends Command {
     public void execute(String... args) {
         manager.getCollection().getMarines().stream()
                 .sorted(Comparator.reverseOrder())
-                .forEach(io.result::println);
+                .forEach(io.getResult()::println);
     }
 }

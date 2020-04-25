@@ -25,10 +25,10 @@ public class AddIfMax extends Command {
         boolean isMax = manager.getCollection().getMarines().stream()
                 .noneMatch(marine -> marine.compareTo(newMarine) > 0);
         if (!isMax) {
-            io.result.println("Введенный элемент не превышает наибольшее значение в коллекции");
+            io.getResult().println("Введенный элемент не превышает наибольшее значение в коллекции");
             return;
         }
         manager.getCollection().addMarine(newMarine);
-        io.result.println("Новый элемент добавлен в коллекцию");
+        io.getResult().println("Новый элемент добавлен в коллекцию");
     }
 }

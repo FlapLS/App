@@ -19,6 +19,6 @@ public class Show extends Command {
 
     @Override
     public void execute(String... args) {
-        io.result.println(manager.getCollection().toString());
+        io.getResult().println(manager.getCollection().toString());
     }
 }

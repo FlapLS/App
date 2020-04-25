@@ -23,6 +23,6 @@ public class History extends Command {
 
     @Override
     public void execute(String... args) {
-        io.result.println(history.toString());
+        io.getResult().println(history.toString());
     }
 }

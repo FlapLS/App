@@ -20,19 +20,19 @@ public class RemoveById extends Command {
     @Override
     public void execute(String... args) {
         if (args.length != 1) {
-            io.result.println("Команда принимает только один аргумент");
+            io.getResult().println("Команда принимает только один аргумент");
             return;
         }
         try {
             boolean isDeleted = manager.getCollection()
                     .removeMarineByPredicate(marine -> marine.getId() == Integer.parseInt(args[0]));
             if (isDeleted) {
-                io.result.println("Элемент успешно удален");
+                io.getResult().println("Элемент успешно удален");
             } else {
-                io.result.println("Не найден элемент с переданным id");
+                io.getResult().println("Не найден элемент с переданным id");
             }
         } catch (NumberFormatException e) {
-            io.result.println("Команда принимает только один цельночисленный id");
+            io.getResult().println("Команда принимает только один цельночисленный id");
         }
     }
 }

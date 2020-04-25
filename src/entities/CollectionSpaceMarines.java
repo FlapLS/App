@@ -34,11 +34,11 @@ public class CollectionSpaceMarines {
     }
 
     /**
+     *Метод использующий фильтр(предикат) для удаление объектов SpaceMarine"
      *
+     * @param predicate фильтр-предикат, возвращающий значение true для удаляемых элементов типа SpaceMarine
      *
-     * @param predicate
-     *
-     * @return
+     * @return возвращает true,если какие-либо элементы были удалены, false нет
      */
     public boolean removeMarineByPredicate(Predicate<SpaceMarine> predicate) {
         return marines.removeIf(predicate);
