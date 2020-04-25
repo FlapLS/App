@@ -149,7 +149,7 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
 
     @Override
     public int compareTo(SpaceMarine o) {
-        return this.id - o.id;
+        return Float.compare(this.health,o.health);
     }
 
     @Override
