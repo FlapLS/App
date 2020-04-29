@@ -4,6 +4,7 @@ package entities;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayDeque;
+import java.util.Set;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -34,7 +35,7 @@ public class CollectionSpaceMarines {
     }
 
     /**
-     * Метод использующий фильтр(предикат) для удаление объектов SpaceMarine"
+     * Метод, использующий фильтр(предикат) для удаление объектов SpaceMarine"
      *
      * @param predicate фильтр-предикат, возвращающий значение true для удаляемых элементов типа SpaceMarine
      * @return возвращает true,если какие-либо элементы были удалены, false нет
@@ -44,7 +45,7 @@ public class CollectionSpaceMarines {
     }
 
     /**
-     * @return
+     * Метод, проверяющий правильность вводимых полей SpaceMarine.
      */
     public boolean isAllElementsValid() {
         return marines.stream().allMatch(SpaceMarine::isValuesValid);
@@ -57,6 +58,14 @@ public class CollectionSpaceMarines {
         marines = marines.stream().sorted().collect(Collectors.toCollection(ArrayDeque::new));
     }
 
+    /**
+     * Метод, проверяющий уникальность каждого id в файле
+     *
+     */
+    public boolean isAllIdsUnique() {
+        Set<Integer> set = marines.stream().map(SpaceMarine::getId).collect(Collectors.toSet());
+        return set.size() == marines.size();
+    }
 
     @Override
     public String toString() {

@@ -19,6 +19,9 @@ public class Chapter {
     @XmlElement
     private String world; //Поле может быть null
 
+    final long lower = 0; //минимальное значение поля marinesCount
+    final long upper = 1000; //максимальное значение поля marinesCount
+
     /**
      * Метод, проверяющий правильность вводимых полей.
      *
@@ -28,7 +31,7 @@ public class Chapter {
         if (name == null || name.isEmpty()) {
             return false;
         }
-        if (marinesCount <= 0 || marinesCount > 1000) {
+        if (marinesCount <= lower || marinesCount > upper) {
             return false;
         }
         return true;
@@ -73,7 +76,7 @@ public class Chapter {
         long count;
         try {
             count = Long.parseLong(stringCount);
-            if (count < 0 || count > 1000) {
+            if (count <= lower || count >= upper) {
                 io.getInteractive().println("Значение marinesCount должно быть больше 0, Максимальное значение поля: 1000");
                 initMarinesCount(io);
                 return;

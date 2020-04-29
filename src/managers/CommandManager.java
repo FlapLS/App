@@ -78,6 +78,10 @@ public class CommandManager {
                 io.getResult().println("Неизвестная команда, чтобы посмотреть список команд введите help");
                 continue;
             }
+            if (commandName.equals("execute_script")) {
+                io.getResult().println("Невозможно исполнить команду execute_script");
+                continue;
+            }
             if (commandArgs.length != ongoingCommand.getArgumentsCount()) {
                 io.getResult().printf("Переданно неверное количество аргументов, ожидается: " + ongoingCommand.getArgumentsCount());
                 continue;

@@ -16,6 +16,8 @@ public class Coordinates {
     @XmlElement
     private Long y; //Максимальное значение поля: 72, Поле не может быть null
 
+    final Long upper = 72L; //аксимальное значение поля y 72
+
     /**
      * Метод, реализующий инициализацию полей класса Coordinates.
      *
@@ -53,7 +55,7 @@ public class Coordinates {
         final String coordinate = io.requestParameter("coordinates.y");
         try {
             long y = Long.parseLong(coordinate);
-            if (y >= 72) {
+            if (y > upper) {
                 io.getInteractive().println("Максимальное значение coordinates.y - 72");
                 initCoordinateY(io);
                 return;
@@ -74,7 +76,7 @@ public class Coordinates {
         if (x == null) {
             return false;
         }
-        if (y == null || y >= 72) {
+        if (y == null || y > upper) {
             return false;
         }
         return true;

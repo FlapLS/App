@@ -22,7 +22,7 @@ public class CollectionManager {
     public CollectionManager(FileManager fileManager) {
         creationTime = OffsetDateTime.now();
         collection = parseXmlFile(fileManager.getFile());
-        if (!collection.isAllElementsValid()) {
+        if (!collection.isAllElementsValid() || !collection.isAllIdsUnique()) {
             collection = new CollectionSpaceMarines();
             System.err.println("Значения в файле не валидны, загруженна пустая коллекция");
         }

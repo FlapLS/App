@@ -21,7 +21,7 @@ public class CommandsHistory {
      * @param command название команды.
      */
     public void addCommand(Command command) {
-        if (history.size() >= 7) {
+        if (history.size() >= size) {
             history.poll();
         }
         history.add(command);

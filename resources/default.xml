@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <SpaceMarineCollection>
     <SpaceMarine>
-        <id>1741372730</id>
+        <id>24</id>
         <name>23</name>
         <creationDate>2020-04-25</creationDate>
         <coordinates>
@@ -16,6 +16,42 @@
             <name>2</name>
             <marinesCount>1</marinesCount>
             <world>2</world>
+        </chapter>
+    </SpaceMarine>
+    <SpaceMarine>
+        <id>2120515892</id>
+        <name>3</name>
+        <creationDate>2020-04-26</creationDate>
+        <coordinates>
+            <x>5</x>
+            <y>3</y>
+        </coordinates>
+        <health>86.0</health>
+        <achievements>3</achievements>
+        <height>45</height>
+        <category>ASSAULT</category>
+        <chapter>
+            <name>23</name>
+            <marinesCount>54</marinesCount>
+            <world>WE</world>
+        </chapter>
+    </SpaceMarine>
+    <SpaceMarine>
+        <id>1831760107</id>
+        <name>ann</name>
+        <creationDate>2020-04-26</creationDate>
+        <coordinates>
+            <x>777</x>
+            <y>10</y>
+        </coordinates>
+        <health>34.0</health>
+        <achievements>04</achievements>
+        <height>700000</height>
+        <category>TERMINATOR</category>
+        <chapter>
+            <name>ass</name>
+            <marinesCount>24</marinesCount>
+            <world>5</world>
         </chapter>
     </SpaceMarine>
 </SpaceMarineCollection>

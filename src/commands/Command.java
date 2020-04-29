@@ -22,6 +22,7 @@ public abstract class Command {
      * @param commandName название команды.
      * @param info        описание команды.
      * @param arguments   аргументы, принимаемые командой.
+     * @param argumentsCount колиество аргументов у команды.
      * @param manager     менеджер коллекции с которой будет работать команда.
      * @param scanner     менеджер который будет работать с потокамми ввода/ввыода.
      */
