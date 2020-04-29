@@ -23,7 +23,7 @@ public class Update extends Command {
     public void execute(String... args) {
         try {
             boolean isDeleted = manager.getCollection()
-                    .removeMarineByPredicate(marine -> marine.getId() == Integer.parseInt(args[0]));
+                    .removeIf(marine -> marine.getId() == Integer.parseInt(args[0]));
             if (!isDeleted) {
                 io.getResult().println("Не найден элемент с переданным id");
                 return;

@@ -40,7 +40,7 @@ public class CollectionSpaceMarines {
      * @param predicate фильтр-предикат, возвращающий значение true для удаляемых элементов типа SpaceMarine
      * @return возвращает true,если какие-либо элементы были удалены, false нет
      */
-    public boolean removeMarineByPredicate(Predicate<SpaceMarine> predicate) {
+    public boolean removeIf(Predicate<SpaceMarine> predicate) {
         return marines.removeIf(predicate);
     }
 
@@ -60,7 +60,6 @@ public class CollectionSpaceMarines {
 
     /**
      * Метод, проверяющий уникальность каждого id в файле
-     *
      */
     public boolean isAllIdsUnique() {
         Set<Integer> set = marines.stream().map(SpaceMarine::getId).collect(Collectors.toSet());

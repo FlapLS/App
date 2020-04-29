@@ -26,12 +26,12 @@ public class SpaceMarineInitializer {
      */
     public SpaceMarine initialize() {
         marine.setName(initName());
-        marine.setCoordinates(Coordinates.initCoordinates(io));
+        marine.setCoordinates(CoordinatesInitializer.initialize(io));
         marine.setHealth(initHealth());
         marine.setAchievements(initAchievements());
         marine.setHeight(initHeight());
         marine.setCategory(initCategory());
-        marine.setChapter(Chapter.initChapter(io));
+        marine.setChapter(ChapterInitializer.initialize(io));
         return marine;
     }
 

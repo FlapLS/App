@@ -44,22 +44,7 @@ public class CommandManager {
      */
     public void start() {
         while (true) {
-            String enteredLine = io.nextLine().trim();
-            if (enteredLine.equals("")) continue;
-            String[] rawCommand = enteredLine.replaceAll(" +", " ").split(" ");
-            String commandName = rawCommand[0];
-            String[] commandArgs = Arrays.copyOfRange(rawCommand, 1, rawCommand.length);
-            Command ongoingCommand = findCommand(commandName);
-            if (ongoingCommand == null) {
-                io.getResult().println("Неизвестная команда, чтобы посмотреть список команд введите help");
-                continue;
-            }
-            if (commandArgs.length != ongoingCommand.getArgumentsCount()) {
-                io.getResult().printf("Переданно неверное количество аргументов, ожидается: " + ongoingCommand.getArgumentsCount());
-                continue;
-            }
-            ongoingCommand.execute(commandArgs);
-            lastCommands.addCommand(ongoingCommand);
+            doIterationWithoutCommands();
         }
     }
 
@@ -67,39 +52,54 @@ public class CommandManager {
      * Метод,реализуюший выполнение команды execute script.
      */
     public void executeScript() {
-        do {
-            String enteredLine = io.nextLine().trim();
-            if (enteredLine.equals("")) continue;
-            String[] rawCommand = enteredLine.replaceAll(" +", " ").split(" ");
-            String commandName = rawCommand[0];
-            String[] commandArgs = Arrays.copyOfRange(rawCommand, 1, rawCommand.length);
-            Command ongoingCommand = findCommand(commandName);
-            if (ongoingCommand == null) {
-                io.getResult().println("Неизвестная команда, чтобы посмотреть список команд введите help");
-                continue;
-            }
-            if (commandName.equals("execute_script")) {
-                io.getResult().println("Невозможно исполнить команду execute_script");
-                continue;
-            }
-            if (commandArgs.length != ongoingCommand.getArgumentsCount()) {
-                io.getResult().printf("Переданно неверное количество аргументов, ожидается: " + ongoingCommand.getArgumentsCount());
-                continue;
-            }
-            ongoingCommand.execute(commandArgs);
-            lastCommands.addCommand(ongoingCommand);
-        } while (io.inputReady());
+        while (io.inputReady()) {
+            doIterationWithoutCommands("execute_script");
+
+        }
     }
 
     /**
-     * Метод,реализуюший идентификацию команды.
+     * Метод, выполняющий одну итерацию с прочтением команды, исключив список комманд.
+     *
+     * @param excludedCommands команды которые не могут быть выполненны в рамках итерации
+     */
+    public void doIterationWithoutCommands(String... excludedCommands) {
+        String enteredLine = io.nextLine().trim();
+        if (enteredLine.equals("")) return;
+        String[] rawCommand = enteredLine.replaceAll(" +", " ").split(" ");
+        String commandName = rawCommand[0];
+        String[] commandArgs = Arrays.copyOfRange(rawCommand, 1, rawCommand.length);
+        Command ongoingCommand;
+        try {
+            ongoingCommand = findCommand(commandName);
+        } catch (CommandNotFoundException e) {
+            io.getResult().println("Неизвестная команда, чтобы посмотреть список команд введите help");
+            return;
+        }
+        if (commandArgs.length != ongoingCommand.getArgumentsCount()) {
+            io.getResult().printf("Переданно неверное количество аргументов, ожидается: " + ongoingCommand.getArgumentsCount());
+            return;
+        }
+        if (Arrays.asList(excludedCommands).contains(commandName)) {
+            io.getResult().println("Невозможно исполнить команду " + commandName);
+            return;
+        }
+        ongoingCommand.execute(commandArgs);
+        lastCommands.addCommand(ongoingCommand);
+    }
+
+    /**
+     * Метод,реализуюший идентификацию команды
      *
      * @param commandName название команды.
-     * @return название комманды или null в случаи неправильного ввода команды.
+     *
+     * @return название комманды или исключение в случаи не прпавильного ввроа
+     *
+     * @throws CommandNotFoundException в случаи отсутствия команды
      */
-    public Command findCommand(String commandName) {
+    public Command findCommand(String commandName) throws CommandNotFoundException {
         return commands.stream().filter(c -> c.getCommandName().equals(commandName))
-                .findAny().orElse(null);
+                .findAny().orElseThrow(() -> new CommandNotFoundException());
     }
 
 

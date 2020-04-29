@@ -23,7 +23,7 @@ public class RemoveLower extends Command {
     @Override
     public void execute(String... args) {
         final SpaceMarine compared = new SpaceMarineInitializer(io, manager.getFreeRandomId()).initialize();
-        boolean isDeleted = manager.getCollection().removeMarineByPredicate(marine -> (marine.compareTo(compared) < 0));
+        boolean isDeleted = manager.getCollection().removeIf(marine -> (marine.compareTo(compared) < 0));
         if (isDeleted) {
             io.getResult().println("Элемент(ы) успешно удален");
         } else {

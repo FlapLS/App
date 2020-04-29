@@ -1,7 +1,5 @@
 package entities;
-//TODO ДОДЕЛАТЬ JOC
 
-import managers.IOManager;
 
 import javax.xml.bind.annotation.XmlElement;
 
@@ -16,55 +14,14 @@ public class Coordinates {
     @XmlElement
     private Long y; //Максимальное значение поля: 72, Поле не может быть null
 
-    final Long upper = 72L; //аксимальное значение поля y 72
+    final static Long upper = 72L; //аксимальное значение поля y 72
 
-    /**
-     * Метод, реализующий инициализацию полей класса Coordinates.
-     *
-     * @param ioManager //TODO менеджер ввода-вывода.
-     * @return инициализированные поля класса Coordinates.
-     */
-    public static Coordinates initCoordinates(IOManager ioManager) {
-        final Coordinates coordinates = new Coordinates();
-        coordinates.initCoordinateX(ioManager);
-        coordinates.initCoordinateY(ioManager);
-        return coordinates;
+    public void setX(Integer x) {
+        this.x = x;
     }
 
-    /**
-     * *Метод, реализующий инициализацию поля x класса Coordinates.
-     *
-     * @param io менеджер ввода-вывода.
-     */
-    private void initCoordinateX(IOManager io) {
-        final String coordinate = io.requestParameter("coordinates.x");
-        try {
-            this.x = Integer.parseInt(coordinate);
-        } catch (NumberFormatException e) {
-            io.getInteractive().println("coordinates.x должен быть цельночисленным");
-            initCoordinateX(io);
-        }
-    }
-
-    /**
-     * Метод, реализующий инициализацию поля y класса Coordinates.
-     *
-     * @param io менеджер ввода-вывода.
-     */
-    private void initCoordinateY(IOManager io) {
-        final String coordinate = io.requestParameter("coordinates.y");
-        try {
-            long y = Long.parseLong(coordinate);
-            if (y > upper) {
-                io.getInteractive().println("Максимальное значение coordinates.y - 72");
-                initCoordinateY(io);
-                return;
-            }
-            this.y = y;
-        } catch (NumberFormatException e) {
-            io.getInteractive().println("coordinates.y долежен быть цельночисленным");
-            initCoordinateY(io);
-        }
+    public void setY(Long y) {
+        this.y = y;
     }
 
     /**
@@ -81,7 +38,6 @@ public class Coordinates {
         }
         return true;
     }
-
 
     @Override
     public String toString() {

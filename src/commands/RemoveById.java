@@ -22,7 +22,7 @@ public class RemoveById extends Command {
     public void execute(String... args) {
         try {
             boolean isDeleted = manager.getCollection()
-                    .removeMarineByPredicate(marine -> marine.getId() == Integer.parseInt(args[0]));
+                    .removeIf(marine -> marine.getId() == Integer.parseInt(args[0]));
             if (isDeleted) {
                 io.getResult().println("Элемент успешно удален");
             } else {
