@@ -12,6 +12,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
+import static utils.CommandsListAggregator.createCommandsList;
+
 /**
  * Класс, описывающий конкретную реализацию команды execute script.
  * <p>
@@ -40,7 +42,7 @@ public class ExecuteScript extends Command {
         try {
             PrintStream outputToMemory = new PrintStream(new ByteArrayOutputStream());
             IOManager ioManager = new IOManager(outputToMemory, System.out, new Scanner(path));
-            CommandManager commandManager = new CommandManager(manager, ioManager);
+            CommandManager commandManager = new CommandManager(manager, ioManager, createCommandsList(manager, ioManager));
             commandManager.executeScript();
         } catch (IOException e) {
             System.err.println("Ошибка при чтении файла");

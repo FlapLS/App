@@ -5,6 +5,7 @@ import utils.CommandsHistory;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -18,24 +19,11 @@ public class CommandManager {
     private final IOManager io;
 
 
-    public CommandManager(CollectionManager manager, IOManager io) {
+    public CommandManager(CollectionManager manager, IOManager io, List<Command> commandList) {
         this.io = io;
-        commands.add(new Info(manager, io));
-        commands.add(new Exit(manager, io));
-        commands.add(new Show(manager, io));
         commands.add(new History(manager, io, lastCommands));
         commands.add(new Help(manager, io, commands));
-        commands.add(new Add(manager, io));
-        commands.add(new Clear(manager, io));
-        commands.add(new RemoveById(manager, io));
-        commands.add(new RemoveLower(manager, io));
-        commands.add(new PrintDescending(manager, io));
-        commands.add(new PrintUniqueChapter(manager, io));
-        commands.add(new FilterByHeight(manager, io));
-        commands.add(new Update(manager, io));
-        commands.add(new AddIfMax(manager, io));
-        commands.add(new Save(manager, io));
-        commands.add(new ExecuteScript(manager, io));
+        commands.addAll(commandList);
 
     }
 
@@ -59,7 +47,7 @@ public class CommandManager {
     }
 
     /**
-     * Метод, выполняющий одну итерацию с прочтением команды, исключив список комманд.
+     * Метод, выполняющий одну итерацию с прочтением команды, исключив список комманд переданный в аргументе.
      *
      * @param excludedCommands команды которые не могут быть выполненны в рамках итерации
      */
@@ -92,15 +80,12 @@ public class CommandManager {
      * Метод,реализуюший идентификацию команды
      *
      * @param commandName название команды.
-     *
      * @return название комманды или исключение в случаи не прпавильного ввроа
-     *
      * @throws CommandNotFoundException в случаи отсутствия команды
      */
     public Command findCommand(String commandName) throws CommandNotFoundException {
         return commands.stream().filter(c -> c.getCommandName().equals(commandName))
                 .findAny().orElseThrow(() -> new CommandNotFoundException());
     }
-
 
 }
